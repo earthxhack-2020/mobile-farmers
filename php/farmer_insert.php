@@ -8,6 +8,7 @@
 	    $u_email = filter_var($_POST["email"], FILTER_SANITIZE_STRING); 
 	    $u_password = filter_var($_POST["password"], FILTER_SANITIZE_STRING); 
 	    $u_availability = filter_var($_POST["availability"], FILTER_SANITIZE_STRING); 
+	    $u_zip_code = filter_var($_POST["zip_code"], FILTER_SANITIZE_STRING); 
 
 		$mysqli = new mysqli("us-cdbr-iron-east-01.cleardb.net","bce8ddb0b14438","c656e6d2","heroku_48340ca8bd6e8bd");
 
@@ -15,10 +16,10 @@
 		  die('Error : ('. $mysqli->connect_errno .') '. $mysqli->connect_error);
 	    }
 		//prepare sql insert query
-		$statement = $mysqli->prepare("INSERT INTO farmer(id, name, phone_number, common_produce, password, email, availability) VALUES(NULL,?,?,?,?,?,?)"); 
+		$statement = $mysqli->prepare("INSERT INTO farmer(id, name, phone_number, common_produce, password, email, availability, zip_code) VALUES(NULL,?,?,?,?,?,?,?)"); 
 		//bind parameters for markers, where (s = string, i = integer, d = double,  b = blob)
 		//bind values and execute insert query
-		$statement->bind_param('ssssss', $u_name, $u_phone_number, $u_common_produce, $u_password, $u_email, $u_availability); 
+		$statement->bind_param('sssssss', $u_name, $u_phone_number, $u_common_produce, $u_password, $u_email, $u_availability, $u_zip_code); 
 		if (!$statement->execute()) {
 			die('Error: ' . mysql_error());
 			echo "<p><b>Error:  . mysql_error()</b></p>";
