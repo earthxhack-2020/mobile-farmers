@@ -1,5 +1,11 @@
 <html>
 <body>
+	<!--?php
+  ini_set('display_errors', 1);
+  ini_set('display_errors', 1);
+  ini_set('display_startup_errors', 1);
+  error_reporting(E_ALL);
+?-->
 <!--?php
   ini_set('display_errors', 1);
   ini_set('display_errors', 1);
@@ -23,10 +29,11 @@
 			die('Error: ' . mysql_error());
 		}
 		echo "1 record added";
-		mysql_close($con)
+		mysql_close($con);
+		
 		if(mysql_affected_rows($connect) > 0){
 	      echo "<p>Farmer Added</p>";
-		  echo "<a href="home.html">Go Back</a>";
+		  echo "<a href=\"home.html\">Go Back</a>";
 		} else {
 	      echo "Farmer NOT Added<br />";
 		  echo mysqli_error ($connect);
