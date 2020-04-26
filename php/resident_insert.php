@@ -17,7 +17,7 @@
 		$statement = $mysqli->prepare("INSERT INTO resident(id, name, phone_number, address, password, email) VALUES(NULL,?,?,?,?,?)"); 
 		//bind parameters for markers, where (s = string, i = integer, d = double,  b = blob)
 		//bind values and execute insert query
-		$statement->bind_param('ssssss', $u_name, $u_phone_number, $u_address, $u_password, $u_email); 
+		$statement->bind_param('sssss', $u_name, $u_phone_number, $u_address, $u_password, $u_email); 
 		if (!$statement->execute()) {
 			die('Error: ' . mysql_error());
 			echo "<p><b>Error:  . mysql_error()</b></p>";
