@@ -32,6 +32,10 @@
     height: 50px !important;
 }
 
+.logo:hover {
+    cursor: pointer;
+}
+
 @media (max-width: 575.98px) {
     .emojis img {
         width: 50px;
