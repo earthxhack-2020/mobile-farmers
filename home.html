@@ -1,0 +1,105 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <title>Mobile Farmers Market</title>
+</head>
+
+<body>
+    <!-- Navigation -->
+    <div class="shadow-sm d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white">
+        <h5 class="my-0 mr-md-auto">
+            <img class="logo" src="./assets/images/logo.PNG" alt="">
+        </h5>
+        <nav class="my-2 my-md-0 mr-md-3">
+            <a class="p-2 selected" href="#">Home</a>
+            <a class="p-2 text-dark" href="#foodDesert">What is a food desert?</a>
+            <a class="p-2 text-dark" href="#faq">FAQ</a>
+        </nav>
+        <a class="btn btn-outline-primary" href="#signUp">Sign up</a>
+    </div>
+
+    <!-- Body-->
+    <div class="container content">
+        <!-- Intro -->
+        <div class="emojis row col-lg-7 col-md-12 d-flex justify-content-between">
+            <img src="./assets/images/corn.png" alt="">
+            <img src="./assets/images/watermelon.png" alt="">
+            <img src="./assets/images/greens.png" alt="">
+            <img src="./assets/images/carrot.png" alt="">
+            <img src="./assets/images/tomato.png" alt="">
+        </div>
+
+        <div class="row intro">
+            <div class="col-lg-10 col-md-12">
+                <h1 class="mb-4">Fresh produce should be available for everyone.</h1>
+                <p class="lead"><strong>Mobile Farmers</strong> provides a way for residents in food deserts to receive alerts when a farmer has fresh produce available for sale in their area.</p>
+                <h4 class="mb-4">Sign up for free today!</h4>
+                <div id="signUp" class="mb-5 row d-none d-sm-block">
+                    <div class="col-lg-12">
+                        <button onclick="document.location.href = './resident-signup.html'" class="btn btn-outline-success btn-lg mr-4"> I'm a resident</button>
+                        <button onclick="document.location = './farmer-signup.html'" class="btn btn-outline-warning btn-lg mr-4">I'm a farmer</button>
+                        <button onclick="document.location = './volunteer-signup.html'" class="btn btn-outline-primary btn-lg">I'm a volunteer</button>
+                    </div>
+                </div>
+                <div id="signUp" class="mb-5 row d-block d-sm-none w-100 m-auto">
+                    <div class="flex-column d-flex">
+                        <button onclick="document.location = './resident-signup.html'" class="btn btn-outline-success btn-lg"> I'm a resident</button>
+                        <br>
+                        <button onclick="document.location = './farmer-signup.html'" class="btn btn-outline-warning btn-lg">I'm a farmer</button>
+                        <br>
+                        <button onclick="document.location = './volunteer-signup.html'" class="btn btn-outline-primary btn-lg">I'm a volunteer</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- What is a food desert -->
+        <div id="foodDesert" class="food-desert row">
+            <div class="col-lg-10 col-md-12">
+                <h2 class="mb-4">What is a food dessert?</h2>
+                <p class="lead">
+                    A food desert is an area that has limited access to affordable and nutritious food. In 2010, the United States Department of Agriculture (USDA) reported that 23.5 million Americans live in “food deserts”, meaning that they live more than one mile from
+                    a supermarket in urban or suburban areas and more than 10 miles from a supermarket in rural areas.
+                </p>
+                <br>
+                <p class="lead">The difference between a rural and an urban food desert is the population density of residents and their distance from the nearest supermarket. Twenty percent of rural areas in the U.S. are classified as food deserts.[31] There are small
+                    areas within each state in the U.S. that are classified as rural food deserts, but they occur most prominently in the Midwest[32] Within these counties, approximately 2.4 million individuals have low access to a large supermarket
+                </p>
+            </div>
+        </div>
+
+        <!-- FAQ-->
+
+        <div id="faq" class="faq row mb-5">
+            <div class="col-lg-10 col-md-12">
+                <h2 class="mb-4">F.A.Q.</h2>
+                <h5 class="mb-3 blue">What areas do you provide service too?</h5>
+                <p class="lead mb-4">We’re currently providing service to residents in Alabama, Mississippi, Georgia, South Carolina. Sign up to receive updates about when we’re rolling out to your area!</p>
+
+                <h5 class="mb-3 blue">Does it cost to sign up as a farmer?</h5>
+                <p class="lead mb-4">No! Our service is totally free for farmers and residents.</p>
+
+                <h5 class="mb-3 blue">How is Mobile Farmer’s Market helping residents who live in food deserts?</h5>
+                <p class="lead mb-4">We eliminate the need for residents to travel long distances to get fresh food. We keep them updated every time a farmer is doing a drop-off near their location by providing SMS updates.
+                </p>
+
+                <h5 class="mb-3 blue">How is Mobile Farmer’s Market helping farmers?</h5>
+                <p class="lead mb-4">We’re helping farmers stay connected with people who need to purchase their products. They are able to decide when and where they want to sale, and also have updates directly sent to customers.</p>
+
+            </div>
+        </div>
+    </div>
+</body>
+
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous">
+</script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+</script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
+</script>
+
+</html>
