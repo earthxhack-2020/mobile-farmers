@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Log In</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="shadow-sm d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white">
+        <h5 class="my-0 mr-md-auto">
+            <img onclick="document.location = './home.html'" class="logo" src="./assets/images/logo.PNG" alt="">
+        </h5>
+        <nav class="my-2 my-md-0 mr-md-3">
+            <a class="p-2 text-dark" href="./home.html">Home</a>
+            <a class="p-2 text-dark" href="./home.html">What is a food desert?</a>
+            <a class="p-2 text-dark" href="./home.html">FAQ</a>
+        </nav>
+        <a class="btn btn-outline-primary" href="./home.html">Sign up</a>
+    </div>
+    <div class="container mb-5">
+        <h3 class="mb-4 mt-5">Log In</h3>
+        <div class="row">
+            <div class="col-md-12">
+                <form novalidate class="mb-5 needs-validation">
+
+                    <div class="form-group">
+                        <label for="Phone Number">Phone Number</label>
+                        <input required type="tel" class="form-control form-control-lg" id="Phone Number" placeholder="Phone Number" />
+                        <div class="invalid-feedback">
+                            Please provide a valid phone number.
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="Password">Password</label>
+                        <input required type="password" class="form-control form-control-lg" id="Password" placeholder="Password" />
+                        <div class="invalid-feedback">
+                            Please provide a valid password.
+                        </div>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-block">Log In</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+
+<script>
+    (function() {
+        'use strict';
+        window.addEventListener('load', function() {
+            // Fetch all the forms we want to apply custom Bootstrap validation styles to
+            var forms = document.getElementsByClassName('needs-validation');
+            // Loop over them and prevent submission
+            var validation = Array.prototype.filter.call(forms, function(form) {
+                form.addEventListener('submit', function(event) {
+                    if (form.checkValidity() === false) {
+                        event.preventDefault();
+                        event.stopPropagation();
+                    }
+                    form.classList.add('was-validated');
+                }, false);
+            });
+        }, false);
+    })();
+</script>
+
+</html>
