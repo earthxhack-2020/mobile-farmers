@@ -1,5 +1,5 @@
 <html>
-<body>>
+<body>
 	<?php
 	    //set PHP variables like this so we can use them anywhere in code below
 	    $u_name = filter_var($_POST["name"], FILTER_SANITIZE_STRING); 
@@ -14,10 +14,11 @@
 		if ($mysqli->connect_error) {
 		  die('Error : ('. $mysqli->connect_errno .') '. $mysqli->connect_error);
 	    }
-
-		$statement = $mysqli->prepare("INSERT INTO farmer(id, name, phone_number, common_produce, password, email, availability) VALUES(NULL,?,?,?,?,?,?)"); //prepare sql insert query
+		//prepare sql insert query
+		$statement = $mysqli->prepare("INSERT INTO farmer(id, name, phone_number, common_produce, password, email, availability) VALUES(NULL,?,?,?,?,?,?)"); 
 		//bind parameters for markers, where (s = string, i = integer, d = double,  b = blob)
-		$statement->bind_param('ssssss', $u_name, $u_phone_number, $u_common_produce, $u_password, $u_email, $u_availability); //bind values and execute insert query
+		//bind values and execute insert query
+		$statement->bind_param('ssssss', $u_name, $u_phone_number, $u_common_produce, $u_password, $u_email, $u_availability); 
 		if (!$statement->execute()) {
 			die('Error: ' . mysql_error());
 			echo "<p><b>Error:  . mysql_error()</b></p>";
