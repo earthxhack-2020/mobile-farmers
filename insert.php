@@ -1,5 +1,11 @@
-
+<html>
+<body>
 	<?php
+		echo "attempting to add 1 record";
+		echo "name: $_POST[name]";
+		echo "name: $_POST[phone_number]";
+		echo "name: $_POST[email]";
+		echo "name: $_POST[availability]";
 		$con = mysql_connect("us-cdbr-iron-east-01.cleardb.net","bce8ddb0b14438","c656e6d2");
 		if (!$con) {
 			die('Could not connect: ' . mysql_error());
@@ -12,4 +18,13 @@
 		}
 		echo "1 record added";
 		mysql_close($con)
+		if(mysql_affected_rows($connect) > 0){
+	      echo "<p>Farmer Added</p>";
+		  echo "<a href="home.html">Go Back</a>";
+		} else {
+	      echo "Farmer NOT Added<br />";
+		  echo mysqli_error ($connect);
+		}
 	?>
+  </body>
+</html>
