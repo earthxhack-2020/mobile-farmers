@@ -36,7 +36,7 @@
     cursor: pointer;
 }
 
-iframe {
+.powerpoint {
     width: -webkit-fill-available;
     height: -webkit-fill-available;
 }
@@ -46,6 +46,16 @@ iframe {
     width: auto;
 }
 
+.chatbot {
+    position: fixed;
+    right: 0px;
+    bottom: 0px;
+}
+
+.mobile-chatbot {
+    display: none;
+}
+
 @media (max-width: 575.98px) {
     .emojis img {
         width: 50px;
@@ -53,5 +63,14 @@ iframe {
     }
     .emojis {
         margin: auto !important;
+    }
+    .chatbot {
+        display: none;
+    }
+    .mobile-chatbot {
+        display: block;
+        margin: auto;
+        margin-top: 50px;
+        width: 100%;
     }
 }
