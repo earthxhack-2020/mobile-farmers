@@ -36,6 +36,16 @@
     cursor: pointer;
 }
 
+iframe {
+    width: -webkit-fill-available;
+    height: -webkit-fill-available;
+}
+
+.harvest-logo {
+    height: 20px;
+    width: auto;
+}
+
 @media (max-width: 575.98px) {
     .emojis img {
         width: 50px;
