@@ -1,5 +1,11 @@
 <html>
 <body>
+<!--?php
+  ini_set('display_errors', 1);
+  ini_set('display_errors', 1);
+  ini_set('display_startup_errors', 1);
+  error_reporting(E_ALL);
+?-->
 	<?php
 		echo "attempting to add 1 record";
 		echo "name: $_POST[name]";
