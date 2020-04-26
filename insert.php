@@ -5,9 +5,9 @@
 		if (!$con) {
 			die('Could not connect: ' . mysql_error());
 		}
-		mysql_select_db("cis_id", $con);
-		$sql="INSERT INTO farmer(name, phone_number, common_produce, password, email, availability) 
-		       VALUES ('$_POST[name]','$_POST[phone_number]','$_POST[common_produce]','$_POST[password]','$_POST[email]','$_POST[availability]')";
+		mysql_select_db("heroku_48340ca8bd6e8bd", $con);
+		$sql="INSERT INTO farmer(id, name, phone_number, common_produce, password, email, availability) 
+		       VALUES (NULL,'$_POST[name]','$_POST[phone_number]','$_POST[common_produce]','$_POST[password]','$_POST[email]','$_POST[availability]')";
 		if (!mysql_query($sql,$con)) {
 			die('Error: ' . mysql_error());
 		}
