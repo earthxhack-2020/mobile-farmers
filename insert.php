@@ -1,5 +1,4 @@
-<html>
-  <body>
+
 	<?php
 		$con = mysql_connect("us-cdbr-iron-east-01.cleardb.net","bce8ddb0b14438","c656e6d2");
 		if (!$con) {
@@ -14,5 +13,3 @@
 		echo "1 record added";
 		mysql_close($con)
 	?>
-  </body>
-</html>
