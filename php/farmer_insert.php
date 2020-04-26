@@ -25,7 +25,7 @@
 			echo "<p><b>Error:  . mysql_error()</b></p>";
 		} else {
 		  echo "<p>Farmer Added</p>";
-		  echo "<a href=\"home.html\">Go Back</a>";
+		  echo "<a href=\"https://mobile-farmers-market.herokuapp.com\">Home</a>";
 		}
 	?>
   </body>
